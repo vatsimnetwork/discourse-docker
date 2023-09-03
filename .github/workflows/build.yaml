@@ -60,3 +60,4 @@ jobs:
           TARGET_IMAGE=registry.digitalocean.com/vatsim-containers/discourse:$TAG
           docker tag $SOURCE_IMAGE $TARGET_IMAGE
           docker push $TARGET_IMAGE
+          echo ":shipit: \`$TARGET_IMAGE\`" >> $GITHUB_STEP_SUMMARY
