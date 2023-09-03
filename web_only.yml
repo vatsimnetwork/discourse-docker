@@ -1,0 +1,24 @@
+templates:
+  - templates/web.template.yml
+  - templates/web.ratelimited.template.yml
+
+env:
+  LC_ALL: en_US.UTF-8
+  LANG: en_US.UTF-8
+  LANGUAGE: en_US.UTF-8
+
+  DISCOURSE_DB_USERNAME: discourse
+  DISCOURSE_DB_PASSWORD: discourse
+  DISCOURSE_DB_HOST: postgres
+  DISCOURSE_REDIS_HOST: redis
+
+hooks:
+  after_code:
+    - exec:
+        cd: $home/plugins
+        cmd:
+          - git clone https://github.com/discourse/discourse-oauth2-basic.git
+          - git clone https://github.com/discourse/discourse-reactions.git
+          - git clone https://github.com/discourse/discourse-solved.git
+          - git clone https://github.com/discourse/discourse-spoiler-alert.git
+          - git clone https://github.com/discourse/discourse-user-notes.git
