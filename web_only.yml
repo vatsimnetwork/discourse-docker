@@ -21,5 +21,4 @@ hooks:
           - git clone https://github.com/discourse/discourse-oauth2-basic.git
           - git clone https://github.com/discourse/discourse-reactions.git
           - git clone https://github.com/discourse/discourse-solved.git
-          - git clone https://github.com/discourse/discourse-spoiler-alert.git
           - git clone https://github.com/discourse/discourse-user-notes.git
